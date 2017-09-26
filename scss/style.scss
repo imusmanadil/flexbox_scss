@@ -34,7 +34,24 @@ a {
 p {
   line-height: 1.5;
 }
-.container { margin: 0 auto; }
+.container { margin: 0 auto; padding: 0 10px; }
+
+.row {
+  padding: $row-padding;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: normal;
+  margin: 5px 0;
+}
+
 hr {
   width: 50px;
   border-width: 2px;
@@ -164,18 +181,8 @@ section.about {
   background: $brand-color;
   color: #fff;
 
-  .row {
-    padding: $row-padding;
-    text-align: center;
-  }
-
   .about-content {
     padding: 0 10px;
-  }
-
-  h2 {
-    font-size: 2em;
-    font-weight: normal;
   }
 
 }
@@ -189,4 +196,33 @@ section.about {
     }
     
   }
+}
+
+
+section.services {
+  .services-container {
+    > div {
+      margin-top: 40px;
+    }
+  }
+
+  .services-container {
+
+    i {
+      color: $brand-color;
+    }
+
+    p {
+      color: #868e96!important;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+  .services-container {
+    @include flex;
+
+  }
+
 }
