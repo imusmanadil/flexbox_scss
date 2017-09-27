@@ -1,0 +1,33 @@
+// Flexbox Mixins
+@mixin flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;  
+}
+
+
+          // Media Query Mixins
+          
+@mixin bp-small {
+  @media (min-width: 550px) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin bp-xLarge {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
